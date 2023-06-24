@@ -1,5 +1,7 @@
 import './App.css';
 import {useState} from "react";
+import Button from "./components/Button";
+import Count from "./components/Count";
 
 function App() {
   const [number, setNumber] = useState(0)
@@ -9,8 +11,8 @@ function App() {
     }
   return (
       <div>
-        <h1>{number}</h1>
-        <button onClick={onIncrease}>+1</button>
+        <Count number={number}/>
+        <Button onIncrease={onIncrease}/>
       </div>
   )
 }
